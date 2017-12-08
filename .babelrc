@@ -1,0 +1,28 @@
+{
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  },
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./app"],
+        "alias": {
+          "~": "./app",
+          "assets": "./app/assets"
+        }
+      }
+    ]
+  ],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": { "browsers": ["last 5 versions"] },
+        "useBuiltIns": true
+      }
+    ]
+  ]
+}

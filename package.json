@@ -1,0 +1,69 @@
+{
+  "name": "webpack-skeleton",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "author": "Dmitry Ruban <dkruban@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RuBAN-GT/webpack-skeleton"
+  },
+  "license": "ISC",
+  "keywords": [
+    "skeleton",
+    "es2015"
+  ],
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server",
+    "watch": "NODE_ENV=production webpack --watch --progress --verbose --colors",
+    "build": "NODE_ENV=production webpack --progress --colors",
+    "eslint": "eslint 'app/**/*.js*'",
+    "eslint:fix": "eslint --fix 'app/**/*.js*'",
+    "precommit": "lint-staged",
+    "prettier": "prettier 'app/**.js*'",
+    "prettier:write": "prettier --write 'app/**/*.js*'"
+  },
+  "lint-staged": {
+    "app/**/*.js*": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.0",
+    "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-harddisk-plugin": "^0.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.7.1",
+    "postcss-loader": "^2.0.8",
+    "prettier": "^1.8.2",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.19.0",
+    "uglify-js": "^3.1.9",
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {}
+}
